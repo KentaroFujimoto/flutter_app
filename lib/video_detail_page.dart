@@ -12,5 +12,4 @@ class VideoDetalPage extends StatelessWidget {
       ),
     );
   }
-  
 }

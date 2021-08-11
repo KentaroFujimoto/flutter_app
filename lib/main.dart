@@ -52,7 +52,7 @@ class MyApp extends StatelessWidget {
                     ),
                     Column(
                       children: <Widget>[
-                        const Text('SiGMaのflutter大学'),
+                        const Text('SiGMaのflutter入門'),
                         TextButton(
                             child: Row(
                               children: [
