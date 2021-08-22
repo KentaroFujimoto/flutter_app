@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "898139348067",
+    "project_id": "flutter-app-bba39",
+    "storage_bucket": "flutter-app-bba39.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:898139348067:android:51d93925c42a36e2752c56",
+        "android_client_info": {
+          "package_name": "com.example.youtube_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "898139348067-ld96i5r6s4qi5unct9dkqohf1te103k2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxQ6pWw_yic1kxZnQbfHgo3jYQ5mx-ABI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "898139348067-ld96i5r6s4qi5unct9dkqohf1te103k2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "898139348067-oqr0apre6e30dtrnoa8of60pfncbf3md.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.youtubeApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class VideoDetalPage extends StatelessWidget {
+class VideoDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
