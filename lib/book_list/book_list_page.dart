@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:youtube_app/add_book/add_book_page.dart';
 import 'package:youtube_app/book_list/book_list_model.dart';
 import 'package:youtube_app/domain/Book.dart';
 
@@ -31,6 +32,35 @@ class BookListPage extends StatelessWidget {
               children: widgets,
             );
           },),
+        ),
+        floatingActionButton: Consumer<BookListModel>(
+          builder: (context, model, child) {
+            return FloatingActionButton(
+              onPressed: () async{
+                //画面遷移
+                final bool? added = await Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => AddBookPage(),
+                        fullscreenDialog: true,
+                    ),
+                );
+
+                if (added != null && added) { //addedがnullでなく、かつtrueの時。つまり、titleとauthorを正常に追加できた時。
+                  final snackBar = SnackBar(
+                    backgroundColor: Colors.green,
+                    content: Text('本を追加しました。'),
+                  );
+                  ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                }
+
+                model.fetchBookList();
+
+              },
+              tooltip: 'Increment',
+              child: Icon(Icons.add),
+            );
+          }
         ),
       ),
     );

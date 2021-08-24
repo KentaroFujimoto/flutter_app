@@ -21,36 +21,37 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      home: ChangeNotifierProvider<MainModel>(
-        create: (_) => MainModel(),
-        child: Scaffold(
-          appBar: AppBar(
-            title: Text('SiGMaのflutter大学'),
-          ),
-          body: Consumer<MainModel>(builder: (context, model, child) {
-              return Center(
-                 child: Column(
-                   children: [
-                     Text(model.sigmaText),
-                     ElevatedButton(
-                         onPressed: (){
-                           Navigator.push(
-                             context,
-                             MaterialPageRoute(builder: (context) => BookListPage()),
-                           );
-                         },
-                         child: Text('ボタン'),
-                         style: ElevatedButton.styleFrom(
-                           primary: Colors.black12,
-                         ),
-                     ),
-                   ],
-                 ),
-              );
-            }
-          ),
-        ),
-      ),
+      home: BookListPage(),
+      // home: ChangeNotifierProvider<MainModel>(
+      //   create: (_) => MainModel(),
+      //   child: Scaffold(
+      //     appBar: AppBar(
+      //       title: Text('SiGMaのflutter大学'),
+      //     ),
+      //     body: Consumer<MainModel>(builder: (context, model, child) {
+      //         return Center(
+      //            child: Column(
+      //              children: [
+      //                Text(model.sigmaText),
+      //                ElevatedButton(
+      //                    onPressed: (){
+      //                      Navigator.push(
+      //                        context,
+      //                        MaterialPageRoute(builder: (context) => BookListPage()),
+      //                      );
+      //                    },
+      //                    child: Text('ボタン'),
+      //                    style: ElevatedButton.styleFrom(
+      //                      primary: Colors.black12,
+      //                    ),
+      //                ),
+      //              ],
+      //            ),
+      //         );
+      //       }
+      //     ),
+      //   ),
+      // ),
     );
   }
 }
